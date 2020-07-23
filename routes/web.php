@@ -29,10 +29,11 @@ Route::get('/services', 'PagesController@services');
 //     return view('pages.about');
 // });
 
-// Route::get('/users/{id}', function ($id) {
-//     return 'This is a user '. $id;
-// });
+Route::get('/users/{id}', function ($id) {
+    return 'This is a user '. $id;
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('posts', 'PostsController');
