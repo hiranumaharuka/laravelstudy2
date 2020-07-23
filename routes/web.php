@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// @でメソッド名を指定
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
+
+// Route::get('/hello', function () {
+//     return '<h1>Hello World</h1>';
+// });
+
+// Route::get('/about', function () {
+//     return view('pages.about');
+// });
+
+// Route::get('/users/{id}', function ($id) {
+//     return 'This is a user '. $id;
+// });
