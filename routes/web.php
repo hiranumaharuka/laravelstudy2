@@ -32,3 +32,7 @@ Route::get('/services', 'PagesController@services');
 // Route::get('/users/{id}', function ($id) {
 //     return 'This is a user '. $id;
 // });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
